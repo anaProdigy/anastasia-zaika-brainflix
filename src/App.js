@@ -16,7 +16,6 @@ function App() {
       avatar="Image"
       btnText="UPLOAD"
       uploadIcon="icon"
-      btnText="UPLOAD"
       />
       <VideoPlayer />
       <VideoInfo />
