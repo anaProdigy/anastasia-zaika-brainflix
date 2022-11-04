@@ -3,14 +3,69 @@
 @use "../../styles/partials/colors" as *;
 
 .description {
- 
-  &-one__poster-img {
-    width: 100vw;
-    height: 15rem;
+  &-one__poster {
+    background-color: $video;
   }
 
-  &-one__num-text{
-padding-left: 1rem;
+  &-one__poster-img {
+    width: 100vw;
+    max-height: 35rem;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+  }
+
+  &-one__title {
+    font-size: 1.5rem;
+  }
+
+  &-one__num-channel {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  &-one__num {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $divider-form;
+    border-top: 1px solid $divider-form;
+  }
+  &-one__num-text,
+  &-one__title {
+    padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  &-one__num-date,
+  &-one__num-likes {
+    width: 50%;
+  }
+
+  &__timestamp,
+  &__views-text,
+  &__likes-text {
+    color: $second-text;
+  }
+  &__views,
+  &__likes {
+    padding-right: 0.5rem;
+  }
+
+  &__views-text {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &-one__num-channel {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+
+  &__likes-text,
+  &__timestamp {
+    padding-bottom: 1rem;
+  }
+
+  &-one__text {
+    font-size: 0.9rem;
   }
 }

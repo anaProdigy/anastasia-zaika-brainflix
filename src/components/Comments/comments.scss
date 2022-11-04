@@ -7,6 +7,17 @@
   padding-right: 1rem;
    border-bottom: 1px solid $divider-form;
    padding-bottom: 1rem;
+
+   &__amount{
+    font-size: 0.9rem;
+   }
+
+   &__title{
+    font-size: 0.9rem;
+    color: $second-text;
+    font-weight: 400;
+    padding-left: 4rem;
+   }
   
 
   &__avatar {
@@ -30,7 +41,7 @@
 
   &__form-input {
     width: 100%;
-    height: 5rem;
+    height: 6rem;
     margin-bottom: 1rem;
     border-radius: 0.4rem;
     border-color: $divider-form;

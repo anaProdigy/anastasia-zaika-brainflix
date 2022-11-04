@@ -27,9 +27,8 @@
   }
 
   &__btn {
-   
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
     // padding-left: 6rem;
     //  padding-right: 6rem;
     width: 100%;
@@ -38,11 +37,9 @@
     color: $background;
     background: $main-button;
     border-radius: 0.4rem;
-    
   }
 
-  &__upload-btn{
-    
+  &__upload-btn {
   }
 
   &__avatar {
