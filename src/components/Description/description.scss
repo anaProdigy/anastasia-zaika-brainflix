@@ -1,0 +1,16 @@
+@use "../../styles/partials/index";
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+
+.description {
+ 
+  &-one__poster-img {
+    width: 100vw;
+    height: 15rem;
+  }
+
+  &-one__num-text{
+padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
