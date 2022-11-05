@@ -6,7 +6,7 @@ import Comments from "./components/Comments/Comments";
 import VideoInfo from "./components/VideoInfo/VideoInfo";
 
 import { useState } from "react";
-import getVideoDetails, { getVideos } from "./utils/utils.jsx";
+import getVideoDetails, { getVideos, convertTime } from "./utils/utils.jsx";
 
 function App() {
   //default video, main video

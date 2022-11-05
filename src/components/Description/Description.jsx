@@ -2,6 +2,7 @@ import "./description.scss";
 import SimpleDateTime from "react-simple-timestamp-to-date";
 import Views from "../../assets/images/Icons/views.svg";
 import Likes from "../../assets/images/Icons/likes.svg";
+import { convertTime } from "../../utils/utils.jsx";
 
 function Description({ videoDetails }) {
   const {
@@ -31,14 +32,10 @@ function Description({ videoDetails }) {
           <div className="description-one__num">
             <div className="description-one__num-date">
               <div className="description-one__num-channel">By {channel}</div>
-              <SimpleDateTime
-                className="description__timestamp"
-                dateFormat="DMY"
-                dateSeparator="/"
-                showTime="0"
-              >
-                {timestamp}
-              </SimpleDateTime>
+
+              <div className="description__timestamp">
+                {convertTime(timestamp)}
+              </div>
             </div>
             <div className="description-one__num-likes">
               <div className="description__views-text">

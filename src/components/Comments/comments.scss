@@ -5,20 +5,21 @@
 .comments {
   padding-left: 1rem;
   padding-right: 1rem;
-   border-bottom: 1px solid $divider-form;
-   padding-bottom: 1rem;
+  border-bottom: 1px solid $divider-form;
+  padding-bottom: 1rem;
 
-   &__amount{
+  &__amount {
     font-size: 0.9rem;
-   }
+  }
 
-   &__title{
+  &__title {
     font-size: 0.9rem;
     color: $second-text;
     font-weight: 400;
     padding-left: 4rem;
-   }
-  
+    margin-bottom: 0;
+    padding-bottom: 0.3rem;
+  }
 
   &__avatar {
     border-radius: 50%;
@@ -31,12 +32,11 @@
   &__holder {
     display: flex;
     gap: 1rem;
-   
   }
 
   &__form {
     width: 100%;
-    
+    padding-bottom: 1rem;
   }
 
   &__form-input {
@@ -46,6 +46,7 @@
     border-radius: 0.4rem;
     border-color: $divider-form;
     background-color: $background-form;
+    
   }
 
   &__form-btn {
@@ -54,5 +55,51 @@
     color: $background;
     background: $main-button;
     border-radius: 0.4rem;
+    padding-top: 0.5rem;
   }
+
+  &__form-img {
+    float: left;
+  }
+
+  &__image {
+    background-color: $divider-form;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    display: flex;
+    border-top: 1px solid $divider-form;
+  }
+  &__name-time {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  &__time {
+    color: $second-text;
+  }
+
+  &__comment {
+    font-size: 0.9rem;
+  }
+}
+::placeholder{
+ color: $main-text;
+ 
 }
