@@ -103,3 +103,38 @@
  color: $main-text;
  
 }
+
+@include medium{
+.comments{
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  &__container{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  &__form{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__form-input, &__form-btn{
+    height: 3rem;
+  }
+&__form-btn{
+  width: 40%;
+}
+
+&__name-time{
+  padding-bottom: 0.5rem;
+}
+&__comment{
+  font-size: 1rem;
+      line-height: 1.4rem;
+}
+}
+  
+}

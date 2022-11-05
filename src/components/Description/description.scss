@@ -69,3 +69,41 @@
     font-size: 0.9rem;
   }
 }
+
+@include medium {
+  .description {
+    &-one__title {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+
+    &-one__num {
+      border-top: none;
+    }
+    &-one__num-text {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    &-one__title {
+      font-size: 2.5rem;
+    }
+
+    &-one__num-channel,
+    &__views-text {
+      padding-top: 0;
+    }
+    &-one__num-date,
+    &-one__num-likes {
+      display: flex;
+      gap: 2rem;
+    }
+    &-one__text{
+      font-size: 1rem;
+      line-height: 1.5rem;
+
+    }
+  }
+}

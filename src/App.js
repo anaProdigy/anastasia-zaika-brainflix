@@ -1,6 +1,5 @@
 import "./styles/App.scss";
 import Header from "./components/Header/Header";
-
 import Description from "./components/Description/Description";
 import Comments from "./components/Comments/Comments";
 import VideoInfo from "./components/VideoInfo/VideoInfo";

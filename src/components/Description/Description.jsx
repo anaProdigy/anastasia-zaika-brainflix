@@ -1,5 +1,4 @@
 import "./description.scss";
-import SimpleDateTime from "react-simple-timestamp-to-date";
 import Views from "../../assets/images/Icons/views.svg";
 import Likes from "../../assets/images/Icons/likes.svg";
 import { convertTime } from "../../utils/utils.jsx";
