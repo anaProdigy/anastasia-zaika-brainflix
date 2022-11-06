@@ -1,0 +1,17 @@
+@use "../../styles/partials/index";
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+
+
+.description{ 
+ &-one__poster {
+    background-color: $video;
+  }
+
+  &-one__poster-img {
+    width: 100vw;
+    max-height: 35rem;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+  }
+}

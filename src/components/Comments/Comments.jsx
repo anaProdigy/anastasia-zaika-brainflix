@@ -18,15 +18,15 @@ function Comments({comments}) {
       <h2 className="comments__title">JOIN THE CONVERSATION</h2>
 
       <div className="comments__holder">
-        <img className="comments__avatar" src={Avatar} alt="user image" />
+        <img className="comments__avatar" src={Avatar} alt="user avatar" />
 
         <form className="comments__form">
-          <input
+          <textarea
             className="comments__form-input"
             placeholder="Add a new comment"
-          ></input>
+          ></textarea>
           <button className="comments__form-btn">
-            <img className="comments__form-img" src={Button}></img>COMMENT
+            <img className="comments__form-img" src={Button} alt="button icon"></img>COMMENT
           </button>
         </form>
       </div>

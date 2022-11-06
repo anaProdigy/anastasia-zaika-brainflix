@@ -46,6 +46,7 @@
     border-radius: 0.4rem;
     border-color: $divider-form;
     background-color: $background-form;
+    resize: none;
     
   }
 
@@ -137,4 +138,10 @@
 }
 }
   
+}
+
+@include large {
+  .comments__comment, .comments__name-time, .comments__title{
+    font-size: 0.8rem;
+  }
 }

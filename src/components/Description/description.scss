@@ -3,17 +3,12 @@
 @use "../../styles/partials/colors" as *;
 
 .description {
-  &-one__poster {
-    background-color: $video;
-  }
+ 
 
-  &-one__poster-img {
-    width: 100vw;
-    max-height: 35rem;
-    aspect-ratio: 16/9;
-    object-fit: contain;
+  &-one__wrap {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-
   &-one__title {
     font-size: 1.5rem;
   }
@@ -31,8 +26,8 @@
   }
   &-one__num-text,
   &-one__title {
-    padding-left: 1rem;
-    padding-right: 1rem;
+   padding-left: 1rem;
+   padding-right: 1rem;
   }
 
   &-one__num-date,
@@ -73,19 +68,25 @@
 @include medium {
   .description {
     &-one__title {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      //padding-left: 2rem;
+      //padding-right: 2rem;
       margin-bottom: 1rem;
       margin-top: 2rem;
     }
 
-    &-one__num {
-      border-top: none;
-    }
-    &-one__num-text {
+    &-one__wrap {
       padding-left: 2rem;
       padding-right: 2rem;
     }
+
+    &-one__num {
+      border-top: none;
+      
+    }
+    &-one__num-text , &-one__title{
+     padding-left: 0;
+      padding-right: 0;
+ }
 
     &-one__title {
       font-size: 2.5rem;
@@ -100,10 +101,27 @@
       display: flex;
       gap: 2rem;
     }
-    &-one__text{
+    &-one__text {
       font-size: 1rem;
       line-height: 1.5rem;
-
     }
+  }
+}
+
+@include large {
+  .description {
+    &-one__title {
+      font-size: 2rem;
+      padding-left: 0;
+    padding-right: 0;
+    }
+&-one__num-text{
+   padding-left: 0;
+    padding-right: 0;
+}
+   
+&-one__text{
+  font-size:0.8rem;
+}
   }
 }

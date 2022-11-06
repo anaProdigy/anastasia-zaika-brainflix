@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Description from "./components/Description/Description";
 import Comments from "./components/Comments/Comments";
 import VideoInfo from "./components/VideoInfo/VideoInfo";
+import MainVideo from "./components/MainVideo/MainVideo";
 
 import { useState } from "react";
 import getVideoDetails, { getVideos, convertTime } from "./utils/utils.jsx";
@@ -25,10 +26,12 @@ function App() {
   return (
     <>
       <Header />
-      
-      <section>
-        <Description videoDetails={videoDetails} />
-        <Comments comments={videoDetails.comments} />
+      <MainVideo videoDetails={videoDetails} />
+      <section className="wrap">
+        <section className="wrap__left">
+          <Description videoDetails={videoDetails} />
+          <Comments comments={videoDetails.comments} />
+        </section>
         <VideoInfo videos={videos} onClick={handleClick} />
       </section>
     </>

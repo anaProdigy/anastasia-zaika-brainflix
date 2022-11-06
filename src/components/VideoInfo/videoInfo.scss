@@ -43,6 +43,37 @@
     padding-bottom: 0.5rem;
     //overflow: hidden;
     //white-space: nowrap;
-    //text-overflow: ellipsis; //?
+    //text-overflow: ellipsis; 
+  }
+}
+
+@include medium {
+  .video-info {
+    border-left: 1px solid $divider-form;
+    &__text{
+      padding-top: 1rem;
+       padding-bottom: 1rem;
+    }
+    &__avatar {
+    width: 7rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+    background-size: cover;
+    
+  }
+
+  &__holder{
+    width:50%;
+  }
+
+  &__cards-title, &__cards-channel{
+    font-size: 1rem;
+  }
+}
+}
+
+@include large{
+  .video-info__holder{
+    width:100%;
   }
 }

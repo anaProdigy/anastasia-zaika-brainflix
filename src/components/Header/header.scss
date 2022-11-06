@@ -95,3 +95,22 @@
     }
   }
 }
+
+
+@include large{
+.header {
+    
+    padding-left: 6rem;
+    padding-right: 6rem;
+
+    &__nav{
+      width: 50%;
+    }
+
+     &__nav-search{
+      width: 50%;
+    }
+}
+
+
+}
