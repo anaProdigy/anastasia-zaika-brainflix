@@ -1,1 +1,116 @@
-//partials @use
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+
+.header {
+  padding: 1rem 1rem 1rem 1rem;
+  position: relative;
+
+  &__logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1.5rem;
+  }
+
+  &__nav-search-field {
+    padding-left: 1.5rem;
+    width: 70%;
+    background: url(../../assets/images/Icons/search.svg) no-repeat left
+      $background-form;
+    background-position: 0.5rem 0.8rem;
+    background-size: 1rem;
+    border-radius: 0.4rem;
+    border-color: $divider-form;
+    height: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__btn {
+    padding-top: 0.5rem;
+    padding-bottom: 0.2rem;
+    // padding-left: 6rem;
+    //  padding-right: 6rem;
+    width: 100%;
+    text-decoration: none;
+    border: 0.3rem solid $main-button;
+    color: $background;
+    background: $main-button;
+    border-radius: 0.4rem;
+  }
+
+  &__upload-btn {
+    float: left;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 3.5rem;
+    right: 1.5rem;
+    flex-shrink: 0;
+  }
+}
+
+@include medium {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  
+
+    &__logo {
+      margin: 0;
+      padding-bottom:0;
+    }
+
+    &__nav {
+      display: flex;
+      justify-content: space-evenly;
+      width: 70%;
+      gap: 1.5rem;
+    }
+
+    &__avatar{
+       position: static;
+    }
+
+    &__nav-search{
+      width: 70%;
+    }
+    &__nav-search-field{
+      margin-bottom:0;
+      width: 100%;
+    
+    }
+
+    &__btn{
+      height:2.5rem;
+      width: 40%;
+      padding-bottom:0.5rem;
+
+    }
+  }
+}
+
+
+@include large{
+.header {
+    
+    padding-left: 6rem;
+    padding-right: 6rem;
+
+    &__nav{
+      width: 50%;
+    }
+
+     &__nav-search{
+      width: 50%;
+    }
+}
+
+
+}

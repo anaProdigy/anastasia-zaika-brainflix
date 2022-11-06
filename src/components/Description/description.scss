@@ -1,0 +1,127 @@
+@use "../../styles/partials/index";
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+
+.description {
+ 
+
+  &-one__wrap {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  &-one__title {
+    font-size: 1.5rem;
+  }
+
+  &-one__num-channel {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  &-one__num {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $divider-form;
+    border-top: 1px solid $divider-form;
+  }
+  &-one__num-text,
+  &-one__title {
+   padding-left: 1rem;
+   padding-right: 1rem;
+  }
+
+  &-one__num-date,
+  &-one__num-likes {
+    width: 50%;
+  }
+
+  &__timestamp,
+  &__views-text,
+  &__likes-text {
+    color: $second-text;
+  }
+  &__views,
+  &__likes {
+    padding-right: 0.5rem;
+  }
+
+  &__views-text {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &-one__num-channel {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+
+  &__likes-text,
+  &__timestamp {
+    padding-bottom: 1rem;
+  }
+
+  &-one__text {
+    font-size: 0.9rem;
+  }
+}
+
+@include medium {
+  .description {
+    &-one__title {
+      //padding-left: 2rem;
+      //padding-right: 2rem;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+
+    &-one__wrap {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    &-one__num {
+      border-top: none;
+      
+    }
+    &-one__num-text , &-one__title{
+     padding-left: 0;
+      padding-right: 0;
+ }
+
+    &-one__title {
+      font-size: 2.5rem;
+    }
+
+    &-one__num-channel,
+    &__views-text {
+      padding-top: 0;
+    }
+    &-one__num-date,
+    &-one__num-likes {
+      display: flex;
+      gap: 2rem;
+    }
+    &-one__text {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+@include large {
+  .description {
+    &-one__title {
+      font-size: 2rem;
+      padding-left: 0;
+    padding-right: 0;
+    }
+&-one__num-text{
+   padding-left: 0;
+    padding-right: 0;
+}
+   
+&-one__text{
+  font-size:0.8rem;
+}
+  }
+}

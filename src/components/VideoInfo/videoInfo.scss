@@ -1,0 +1,79 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+
+.video-info {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  &__text {
+    font-size: 0.8rem;
+    color: $second-text;
+    font-weight: 400;
+  }
+  &__avatar {
+    width: 6rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    background-size: cover;
+    flex-shrink: 0;
+  }
+
+  &__cards {
+    display: flex;
+    padding-bottom: 1rem;
+  }
+
+  &__title-channel {
+    width: 60%;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+
+  &__cards-title,
+  &__cards-channel {
+    font-size: 0.8rem;
+  }
+
+  &__cards-title {
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+    //overflow: hidden;
+    //white-space: nowrap;
+    //text-overflow: ellipsis; 
+  }
+}
+
+@include medium {
+  .video-info {
+    border-left: 1px solid $divider-form;
+    &__text{
+      padding-top: 1rem;
+       padding-bottom: 1rem;
+    }
+    &__avatar {
+    width: 7rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+    background-size: cover;
+    
+  }
+
+  &__holder{
+    width:50%;
+  }
+
+  &__cards-title, &__cards-channel{
+    font-size: 1rem;
+  }
+}
+}
+
+@include large{
+  .video-info__holder{
+    width:100%;
+  }
+}

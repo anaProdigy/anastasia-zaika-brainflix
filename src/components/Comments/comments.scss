@@ -1,0 +1,147 @@
+@use "../../styles/partials/index";
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+
+.comments {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-bottom: 1px solid $divider-form;
+  padding-bottom: 1rem;
+
+  &__amount {
+    font-size: 0.9rem;
+  }
+
+  &__title {
+    font-size: 0.9rem;
+    color: $second-text;
+    font-weight: 400;
+    padding-left: 4rem;
+    margin-bottom: 0;
+    padding-bottom: 0.3rem;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    top: 3.5rem;
+    right: 1.5rem;
+  }
+
+  &__holder {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__form {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+
+  &__form-input {
+    width: 100%;
+    height: 6rem;
+    margin-bottom: 1rem;
+    border-radius: 0.4rem;
+    border-color: $divider-form;
+    background-color: $background-form;
+    resize: none;
+    
+  }
+
+  &__form-btn {
+    width: 100%;
+    border: 0.3rem solid $main-button;
+    color: $background;
+    background: $main-button;
+    border-radius: 0.4rem;
+    padding-top: 0.5rem;
+  }
+
+  &__form-img {
+    float: left;
+  }
+
+  &__image {
+    background-color: $divider-form;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    display: flex;
+    border-top: 1px solid $divider-form;
+  }
+  &__name-time {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  &__time {
+    color: $second-text;
+  }
+
+  &__comment {
+    font-size: 0.9rem;
+  }
+}
+::placeholder{
+ color: $main-text;
+ 
+}
+
+@include medium{
+.comments{
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  &__container{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  &__form{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__form-input, &__form-btn{
+    height: 3rem;
+  }
+&__form-btn{
+  width: 40%;
+}
+
+&__name-time{
+  padding-bottom: 0.5rem;
+}
+&__comment{
+  font-size: 1rem;
+      line-height: 1.4rem;
+}
+}
+  
+}
+
+@include large {
+  .comments__comment, .comments__name-time, .comments__title{
+    font-size: 0.8rem;
+  }
+}
