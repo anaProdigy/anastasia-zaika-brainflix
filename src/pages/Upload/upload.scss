@@ -1,0 +1,64 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+
+.upload {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  &__form-labl-one {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img-text,
+  &__form-name,
+  &__form-text {
+    font-size: 0.9rem;
+    color: $second-text;
+    font-weight: 400;
+    margin-bottom: 0;
+    padding-bottom: 0.3rem;
+  }
+
+  &__form-text,
+  &__form-input {
+    width: 100%;
+    height: 6rem;
+    margin-bottom: 1rem;
+    border-radius: 0.4rem;
+    border-color: $divider-form;
+    background-color: $background-form;
+    resize: none;
+  }
+
+  &__form-input {
+    height: 3rem;
+  }
+
+  &__form-btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-publish {
+    padding-top: 0.5rem;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-decoration: none;
+    border: 0.3rem solid $main-button;
+    color: $background;
+    background: $main-button;
+    border-radius: 0.4rem;
+    font-weight: 700;
+  }
+
+  &__form-cancel {
+    color: $main-button;
+    background-color: $background;
+    border: none;
+    padding-top: 2rem;
+    font-weight: 700;
+  }
+}

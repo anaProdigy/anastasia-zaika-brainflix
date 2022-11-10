@@ -18,7 +18,6 @@ function Description({ videoDetails }) {
   return (
     <section className="description">
       <section className="description-one">
-        
         <div className="description-one__wrap">
           <h1 className="description-one__title">{title}</h1>
           <div className="description-one__num-text">

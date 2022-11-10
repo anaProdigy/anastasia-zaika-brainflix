@@ -1,7 +1,7 @@
 import "./mainVideo.scss";
 
 function MainVideo({ videoDetails }) {
-  const { image, ...rest } = videoDetails;
+  const { image, id, ...rest } = videoDetails;
 
   return (
     <div className="description-one__poster">

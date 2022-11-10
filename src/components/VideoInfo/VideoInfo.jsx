@@ -13,7 +13,7 @@ function VideoInfo(props) {
               src={video.image}
               alt={video.title}
               className="video-info__avatar"
-              onClick={(clickEvnt) => props.onClick(clickEvnt, video.id)}
+              // onClick={(clickEvnt) => props.onClick(clickEvnt, video.id)}
             />
             <div className="video-info__title-channel">
               <div className="video-info__cards-title">{video.title}</div>
