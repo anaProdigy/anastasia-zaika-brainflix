@@ -1,4 +1,5 @@
 import "./upload.scss";
+import Bike from "../../assets/images/Upload-video-preview.jpg";
 
 
 
@@ -11,7 +12,7 @@ function Upload() {
         <h2 className="upload__img-text">VIDEO THUMBNAIL</h2>
         <img
           className="upload__avatar"
-          src=".assets/images/Upload-video-preview.jpg"
+          src={Bike}
           alt="bike"
         />
       </div>

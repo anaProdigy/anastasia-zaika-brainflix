@@ -10,18 +10,16 @@ import axios from "axios";
 const BASE_URL = `https://project-2-api.herokuapp.com?api_key=9fd729ba-02a3-4f19-9517-988d807bda11`;
 
 function Home() {
-  const [videoId, setVideoId] = useState(
-    "84e96018-4022-434e-80bf-000ce4cd12b8"
-  );
+  //   const [videoId, setVideoId] = useState(
+  //     "84e96018-4022-434e-80bf-000ce4cd12b8"
+  //   );
   const [videos, setVideos] = useState([]);
   const [videoDetails, setVideoDetails] = useState({});
-  const { params } = useParams();
-  
-  const handleVideoChange = (videoId) => {
-    setVideoId(videoId);
-    //   setVideos(getVideos(videoIdClickedOn));
-    //   setVideoDetails(getVideoDetails(videoIdClickedOn));
-  };
+  const { videoId } = useParams();
+
+  //   const handleVideoChange = (videoId) => {
+
+  //   };
 
   useEffect(() => {
     axios
@@ -29,29 +27,15 @@ function Home() {
         "https://project-2-api.herokuapp.com/videos?api_key=9fd729ba-02a3-4f19-9517-988d807bda11"
       )
       .then((response) => {
-        //console.log(response);
-        //console.log(response.data)
-        //setVideos(response.data);
-
-        setVideos(
-          response.data
-            .filter((video) => video.id !== videoId)
-            .map((video) => {
-              const { id, image, title, channel } = video;
-              return {
-                id,
-                image,
-                title,
-                channel,
-              };
-            })
-        );
+        setVideos(response.data);
       })
       .catch((error) => console.log(error));
 
+    const id = videoId || "84e96018-4022-434e-80bf-000ce4cd12b8";
+
     axios
       .get(
-        "https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=9fd729ba-02a3-4f19-9517-988d807bda11"
+        `https://project-2-api.herokuapp.com/videos/${id}?api_key=9fd729ba-02a3-4f19-9517-988d807bda11`
       )
       .then((response) => {
         //console.log("Data", response);
@@ -59,7 +43,7 @@ function Home() {
         setVideoDetails(response.data);
         //console.log("videoDetails", videoDetails);
       });
-  }, []);
+  }, [videoId]);
 
   return (
     <div>
@@ -72,7 +56,10 @@ function Home() {
             videoDetails={videoDetails && videoDetails}
           />
         </section>
-        <VideoInfo videos={videos && videos} />
+        <VideoInfo
+          videos={videos && videos}
+          videoDetails={videoDetails && videoDetails}
+        />
       </section>
     </div>
   );

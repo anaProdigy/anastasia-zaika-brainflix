@@ -10,41 +10,48 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
   }
 
   &__nav-search-field {
     padding-left: 1.5rem;
-    width: 70%;
+    width: 75%;
     background: url(../../assets/images/Icons/search.svg) no-repeat left
       $background-form;
     background-position: 0.5rem 0.8rem;
     background-size: 1rem;
     border-radius: 0.4rem;
-    border-color: $divider-form;
-    height: 2.5rem;
-    margin-bottom: 2rem;
+    border: 1px solid $divider-form;
+    height: 3rem;
+    margin-bottom: 1rem;
   }
 
   &__btn {
     padding-top: 0.5rem;
     padding-bottom: 0.2rem;
     width: 100%;
-    text-decoration: none;
     border: 0.3rem solid $main-button;
-    color: $background;
-    background: $main-button;
+    
+    background:  url(../../assets/images/Icons/upload.svg) no-repeat left
+      $background-form;
+      background-position: 0.5rem;
+    background-color: $main-button;
     border-radius: 0.4rem;
+    height: 3rem;
   }
-
+&__btn-link{
+  text-decoration: none;
+  color: $background;
+  font-weight: 700;
+}
   &__upload-btn {
     float: left;
   }
 
   &__avatar {
     border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     position: absolute;
     top: 3.5rem;
     right: 1.5rem;
@@ -56,8 +63,8 @@
   .header {
     display: flex;
     justify-content: space-between;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   
 
     &__logo {
@@ -86,7 +93,7 @@
     }
 
     &__btn{
-      height:2.5rem;
+      height:3rem;
       width: 40%;
       padding-bottom:0.5rem;
 
@@ -107,6 +114,13 @@
 
      &__nav-search{
       width: 50%;
+    }
+
+    &__btn{
+     
+      width: 30%;
+      padding-bottom:0.5rem;
+
     }
 }
 

@@ -21,8 +21,9 @@ function Header(props) {
           ></input>
         </div>
         <button className="header__btn" href="/">
-          <Link to="/upload">
-            <img className="header__upload-btn" src={Button} alt="arrow" />
+          <Link className="header__btn-link"  to="/upload">
+            {" "}
+            {/* <img className="header__upload-btn" src={Button} alt="arrow" /> */}
             UPLOAD
           </Link>
         </button>

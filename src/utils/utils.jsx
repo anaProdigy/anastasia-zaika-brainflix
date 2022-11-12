@@ -1,5 +1,5 @@
-import bfVideos from "../data/videos.json";
-import bfVideoDetails from "../data/video-details.json";
+//import bfVideos from "../data/videos.json";
+//import bfVideoDetails from "../data/video-details.json";
 
 
 
@@ -15,8 +15,18 @@ import bfVideoDetails from "../data/video-details.json";
 
 
 export const convertTime = (timeStamp) => {
-    return new Date(timeStamp).toLocaleDateString();
+
+    return new Date(timeStamp).toLocaleDateString(
+      "default", { year: "numeric", month: "2-digit", day: "2-digit" }
+    );
+      
+
+    
 };
+//  export const NewTime = () => {
+// return convertTime.replace(/(^|\D)(\d)(?!\d)/g, "$10$2");
 
+// }
 
+// console.log(NewTime);
 //export default getVideoDetails;
