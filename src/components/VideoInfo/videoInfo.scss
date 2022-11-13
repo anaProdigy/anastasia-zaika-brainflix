@@ -9,10 +9,10 @@
   &__text {
     font-size: 0.8rem;
     color: $second-text;
-    font-weight: 400;
+    font-weight: 700;
   }
   &__avatar {
-    width: 6rem;
+    width: 7rem;
     height: 4rem;
     border-radius: 0.5rem;
     background-size: cover;
@@ -47,15 +47,21 @@
   }
 }
 
+a {
+  text-decoration: none;
+  color: $main-text;
+}
 @include medium {
   .video-info {
     border-left: 1px solid $divider-form;
+    
     &__text{
       padding-top: 1rem;
        padding-bottom: 1rem;
+       padding-left:2rem;
     }
     &__avatar {
-    width: 7rem;
+    width: 8rem;
     height: 5rem;
     border-radius: 0.5rem;
     background-size: cover;
@@ -64,6 +70,7 @@
 
   &__holder{
     width:50%;
+    padding-left: 2rem;
   }
 
   &__cards-title, &__cards-channel{

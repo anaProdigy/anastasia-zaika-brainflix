@@ -1,6 +1,5 @@
 import "./comments.scss";
 import React from 'react';
-import Button from "../../assets/images/Icons/add_comment.svg";
 import Avatar from "../../assets/images/Mohan-muruge.jpg";
 import {convertTime } from "../../utils/utils.jsx"
 
@@ -15,7 +14,6 @@ function Comments({comments, videoDetails}) {
       <section className="comments">
         <h1 className="comments__amount">
           {comments?.length} Comments
-          {/* display number of elements in the arrey .length */}
         </h1>
         <h2 className="comments__title">JOIN THE CONVERSATION</h2>
 
@@ -28,11 +26,6 @@ function Comments({comments, videoDetails}) {
               placeholder="Add a new comment"
             ></textarea>
             <button className="comments__form-btn">
-              <img
-                className="comments__form-img"
-                src={Button}
-                alt="button icon"
-              ></img>
               COMMENT
             </button>
           </form>

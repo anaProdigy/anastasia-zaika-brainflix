@@ -1,17 +1,4 @@
-//import bfVideos from "../data/videos.json";
-//import bfVideoDetails from "../data/video-details.json";
 
-
-
-// export const getVideos = (videoId) => {
-//   return bfVideos.filter((video) => video.id !== videoId);
-// };
-
-// const getVideoDetails = (videoId) => {
-//   return bfVideoDetails.find((video) => video.id === videoId);
-// };
-
-// create a fn that returns ts directly , fn that  returns time
 
 
 export const convertTime = (timeStamp) => {
@@ -23,10 +10,3 @@ export const convertTime = (timeStamp) => {
 
     
 };
-//  export const NewTime = () => {
-// return convertTime.replace(/(^|\D)(\d)(?!\d)/g, "$10$2");
-
-// }
-
-// console.log(NewTime);
-//export default getVideoDetails;

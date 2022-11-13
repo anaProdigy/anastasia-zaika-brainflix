@@ -1,9 +1,5 @@
 import Logo from "../../assets/images/Logo/BrainFlix-logo.svg";
-import Avatar from "../../assets/images/Mohan-muruge.jpg";
-import Button from "../../assets/images/Icons/upload.svg";
-
 import { Link } from "react-router-dom";
-
 import "./header.scss";
 
 function Header(props) {
@@ -21,14 +17,13 @@ function Header(props) {
           ></input>
         </div>
         <button className="header__btn" href="/">
-          <Link className="header__btn-link"  to="/upload">
-            {" "}
-            {/* <img className="header__upload-btn" src={Button} alt="arrow" /> */}
+          <Link className="header__btn-link" to="/upload">
             UPLOAD
           </Link>
         </button>
 
-        <img className="header__avatar" src={Avatar} alt="user head" />
+        <div className="header__avatar"></div>
+        
       </div>
     </header>
   );

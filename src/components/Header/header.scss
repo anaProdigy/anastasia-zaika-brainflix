@@ -10,7 +10,8 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 1rem;
+    Padding-top: 1rem;
+    
   }
 
   &__nav-search-field {
@@ -49,6 +50,8 @@
   }
 
   &__avatar {
+    background:  url(../../assets/images/Mohan-muruge.jpg) no-repeat left
+      $background-form;
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
@@ -56,6 +59,7 @@
     top: 3.5rem;
     right: 1.5rem;
     flex-shrink: 0;
+    background-size: cover;
   }
 }
 

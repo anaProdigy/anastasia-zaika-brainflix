@@ -124,16 +124,26 @@ padding-bottom:0.5rem;
   .description {
     &-one__title {
       font-size: 2rem;
-      padding-left: 0;
+      padding-left: 1rem;
       padding-right: 0;
     }
     &-one__num-text {
       padding-left: 0;
       padding-right: 0;
+      margin:0;
+      margin-left:1rem;
+      max-height: 5rem;
     }
 
     &-one__text {
       font-size: 0.8rem;
+      line-height: 1.2rem;
     }
+&-one__wrap{
+
+   padding-left: 0;
+      padding-right: 0;
+}
+    
   }
 }

@@ -7,19 +7,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-const BASE_URL = `https://project-2-api.herokuapp.com?api_key=9fd729ba-02a3-4f19-9517-988d807bda11`;
 
 function Home() {
-  //   const [videoId, setVideoId] = useState(
-  //     "84e96018-4022-434e-80bf-000ce4cd12b8"
-  //   );
+  
   const [videos, setVideos] = useState([]);
   const [videoDetails, setVideoDetails] = useState({});
   const { videoId } = useParams();
 
-  //   const handleVideoChange = (videoId) => {
-
-  //   };
 
   useEffect(() => {
     axios
