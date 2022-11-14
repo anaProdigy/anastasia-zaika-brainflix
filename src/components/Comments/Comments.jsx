@@ -38,7 +38,7 @@ function Comments({comments, videoDetails}) {
               <div className="comments__name-time">
                 <div className="comments__name">{comment.name}</div>
                 <div className="comments__time">
-                  {convertTime(videoDetails.timestamp)}
+                  {convertTime(comment.timestamp)}
                 </div>
               </div>
               <div className="comments__comment">{comment.comment}</div>
