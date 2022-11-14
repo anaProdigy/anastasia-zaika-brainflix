@@ -4,30 +4,33 @@
 
 .description {
  
-
-  &-one__wrap {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
   &-one__title {
     font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: $main-text;
+    font-weight: 700;
+    line-height: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   &-one__num-channel {
     font-size: 0.9rem;
     font-weight: 700;
+    color: $main-text;
+  }
+  &-one__num-text {
+    margin: 1rem 1rem;
+    border-bottom: 1px solid $divider-form;
+    border-top: 1px solid $divider-form;
   }
 
   &-one__num {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid $divider-form;
-    border-top: 1px solid $divider-form;
-  }
-  &-one__num-text,
-  &-one__title {
-   padding-left: 1rem;
-   padding-right: 1rem;
+    //
+    //
   }
 
   &-one__num-date,
@@ -48,6 +51,7 @@
   &__views-text {
     padding-top: 1rem;
     padding-bottom: 1rem;
+   
   }
 
   &-one__num-channel {
@@ -62,6 +66,9 @@
 
   &-one__text {
     font-size: 0.9rem;
+    line-height: 1.2rem;
+     padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -81,17 +88,22 @@
 
     &-one__num {
       border-top: none;
-      
     }
-    &-one__num-text , &-one__title{
-     padding-left: 0;
-      padding-right: 0;
- }
+    &-one__num-text,
+    &-one__title {
+      border-top: none;
+    }
 
     &-one__title {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
+   &__timestamp, &__views-text, &__likes-text{
+    padding-bottom: 0rem;
+   }
 
+   &-one__num-channel{
+padding-bottom:0.5rem;
+   }
     &-one__num-channel,
     &__views-text {
       padding-top: 0;
@@ -112,16 +124,26 @@
   .description {
     &-one__title {
       font-size: 2rem;
-      padding-left: 0;
-    padding-right: 0;
+      padding-left: 1rem;
+      padding-right: 0;
     }
-&-one__num-text{
+    &-one__num-text {
+      padding-left: 0;
+      padding-right: 0;
+      margin:0;
+      margin-left:1rem;
+      max-height: 5rem;
+    }
+
+    &-one__text {
+      font-size: 0.8rem;
+      line-height: 1.2rem;
+    }
+&-one__wrap{
+
    padding-left: 0;
-    padding-right: 0;
+      padding-right: 0;
 }
-   
-&-one__text{
-  font-size:0.8rem;
-}
+    
   }
 }

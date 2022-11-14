@@ -1,40 +1,26 @@
 import "./styles/App.scss";
-import Header from "./components/Header/Header";
-import Description from "./components/Description/Description";
-import Comments from "./components/Comments/Comments";
-import VideoInfo from "./components/VideoInfo/VideoInfo";
-import MainVideo from "./components/MainVideo/MainVideo";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import { useState } from "react";
-import getVideoDetails, { getVideos, convertTime } from "./utils/utils.jsx";
+import Home from "./pages/Home/Home";
+import Header from "./components/Header/Header";
+import Upload from "./pages/Upload/Upload";
+import Publish from "./pages/Publish/Publish";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
-  //default video, main video
-  const [videoId, setVideoId] = useState(
-    "84e96018-4022-434e-80bf-000ce4cd12b8"
-  );
-  const [videos, setVideos] = useState(getVideos(videoId));
 
-  const [videoDetails, setVideoDetails] = useState(getVideoDetails(videoId));
-
-  const handleClick = (clickEvnt, videoIdClickedOn) => {
-    setVideoId(videoIdClickedOn);
-    setVideos(getVideos(videoIdClickedOn));
-    setVideoDetails(getVideoDetails(videoIdClickedOn));
-  };
 
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <MainVideo videoDetails={videoDetails} />
-      <section className="wrap">
-        <section className="wrap__left">
-          <Description videoDetails={videoDetails} />
-          <Comments comments={videoDetails.comments} />
-        </section>
-        <VideoInfo videos={videos} onClick={handleClick} />
-      </section>
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path=":videoId" element={<Home />} />
+        <Route path="upload" element={<Upload />} />
+        <Route path="/publish" element={<Publish />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
