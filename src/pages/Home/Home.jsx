@@ -7,19 +7,16 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
+const api_key ="b1993973-f705-4b41-9e54-bc62a8aa7e81";
 
 function Home() {
-  
   const [videos, setVideos] = useState([]);
   const [videoDetails, setVideoDetails] = useState({});
   const { videoId } = useParams();
 
-
   useEffect(() => {
     axios
-      .get(
-        "https://project-2-api.herokuapp.com/videos?api_key=9fd729ba-02a3-4f19-9517-988d807bda11"
-      )
+      .get("http://localhost:8080/videos")
       .then((response) => {
         setVideos(response.data);
       })
@@ -27,16 +24,12 @@ function Home() {
 
     const id = videoId || "84e96018-4022-434e-80bf-000ce4cd12b8";
 
-    axios
-      .get(
-        `https://project-2-api.herokuapp.com/videos/${id}?api_key=9fd729ba-02a3-4f19-9517-988d807bda11`
-      )
-      .then((response) => {
-        //console.log("Data", response);
+    axios.get(`http://localhost:8080/videos/${id}`).then((response) => {
+      //console.log("Data", response); id= videoId
 
-        setVideoDetails(response.data);
-        //console.log("videoDetails", videoDetails);
-      });
+      setVideoDetails(response.data);
+      //console.log("videoDetails", videoDetails);
+    });
   }, [videoId]);
 
   return (

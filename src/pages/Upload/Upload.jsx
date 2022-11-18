@@ -1,9 +1,38 @@
 import "./upload.scss";
 import Bike from "../../assets/images/Upload-video-preview.jpg";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 
 function Upload() {
+  const postVideo = (event) => {
+    event.preventDefault();
+
+    const error = () => {
+      alert("enter the title of your video");
+    };
+
+    const title = event.target.title.value;
+    if (!title) {
+      error();
+      return;
+    }
+
+    const description = event.target.description.value;
+    if (!description) {
+      error();
+      return;
+    }
+
+    axios
+      .post("http://localhost:8080/api/videos/", {
+        title: title,
+        description: description,
+      })
+      .then((postVideo) => {
+        event.target.reset();
+      });
+  };
+
   return (
     <div className="upload">
       <h1 className="upload__title">Upload Video</h1>
@@ -14,9 +43,15 @@ function Upload() {
           <img className="upload__avatar" src={Bike} alt="bike" />
         </div>
 
-        <form className="upload__form">
+        <form
+          className="upload__form"
+          id="upload__form-item 
+          onSubmit={postVideo}"
+        >
           <div className="upload__form-labl-one">
-            <h2 className="upload__form-name"> TITLE YOUR VIDEO</h2>
+            <label htmlFor="title" className="upload__form-name">
+              TITLE YOUR VIDEO
+            </label>
 
             <textarea
               className="upload__form-input"
@@ -26,9 +61,15 @@ function Upload() {
             />
           </div>
           <div className="upload__form-labl-one">
-            <h2 className="upload__form-name">ADD A VIDEO DESCRIPTION</h2>
+           
+            <label htmlFor="description" className="upload__form-name">
+              
+              ADD A VIDEO DESCRIPTION
+            </label>
 
             <textarea
+            type="text"
+            name="description"
               className="upload__form-text"
               placeholder="Add a description to your video"
             />
@@ -48,8 +89,5 @@ function Upload() {
     </div>
   );
 }
-
-
-
 
 export default Upload;
