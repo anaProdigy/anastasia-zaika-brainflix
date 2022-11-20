@@ -2,12 +2,23 @@ import "./comments.scss";
 import React from 'react';
 import Avatar from "../../assets/images/Mohan-muruge.jpg";
 import {convertTime } from "../../utils/utils.jsx"
+import axios from "axios";
 
 
 
 
-function Comments({comments, videoDetails}) {
-  console.log(comments)
+function Comments({comments, videoId}) {
+  console.log(videoId)
+  
+  const clickComment = (e) => {
+    e.preventDefault();
+
+    axios.post(
+`http://localhost:8080/videos/${videoId}/comments`
+    )
+console.log("clickComment")
+  }
+
   
   return (
     <>
@@ -20,7 +31,7 @@ function Comments({comments, videoDetails}) {
         <div className="comments__holder">
           <img className="comments__avatar" src={Avatar} alt="user avatar" />
 
-          <form className="comments__form">
+          <form className="comments__form"  onSubmit ={(event) => clickComment(event)}>
             <textarea
               className="comments__form-input"
               placeholder="Add a new comment"

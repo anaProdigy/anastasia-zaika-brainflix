@@ -5,16 +5,19 @@
 .header {
   padding: 1rem 1rem 1rem 1rem;
   position: relative;
+  border-bottom: 1px solid $divider-form;
 
   &__logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
     Padding-top: 1rem;
+    padding-bottom: 1rem;
     
   }
 
   &__nav-search-field {
+     font-family: "Avenir";
     padding-left: 1.5rem;
     width: 75%;
     background: url(../../assets/images/Icons/search.svg) no-repeat left
@@ -25,6 +28,8 @@
     border: 1px solid $divider-form;
     height: 3rem;
     margin-bottom: 1rem;
+    padding-left: 2rem;
+    font-size: 1rem;
   }
 
   &__btn {

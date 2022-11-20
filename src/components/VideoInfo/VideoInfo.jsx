@@ -13,7 +13,7 @@ function VideoInfo(props) {
           <Link to={`/${video.id}`} key={video.id}>
             <div className="video-info__cards">
               <img
-                src={video.image}
+                src={`http://localhost:8080/${video.image}`} 
                 alt={video.title}
                 className="video-info__avatar"
               />

@@ -31,11 +31,11 @@ function Description({ videoDetails }) {
               </div>
               <div className="description-one__num-likes">
                 <div className="description__views-text">
-                  <img className="description__views" src={Views} />
+                  <img className="description__views" alt="eye" src={Views} />
                   {views}
                 </div>
                 <div className="description__likes-text">
-                  <img className="description__likes" src={Likes} />
+                  <img className="description__likes" alt="heart"src={Likes} />
                   {likes}
                 </div>
               </div>

@@ -1,9 +1,13 @@
 import "./upload.scss";
 import Bike from "../../assets/images/Upload-video-preview.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom";
+
+
 import axios from "axios";
 
 function Upload() {
+
+  const navigate = useNavigate()
   const postVideo = (event) => {
     event.preventDefault();
 
@@ -24,12 +28,13 @@ function Upload() {
     }
 
     axios
-      .post("http://localhost:8080/api/videos/", {
+      .post("http://localhost:8080/videos/", {
         title: title,
         description: description,
       })
       .then((postVideo) => {
-        event.target.reset();
+navigate("/")
+        //event.target.reset();
       });
   };
 
@@ -45,8 +50,8 @@ function Upload() {
 
         <form
           className="upload__form"
-          id="upload__form-item 
-          onSubmit={postVideo}"
+          id="upload__form-item"
+          onSubmit={postVideo}
         >
           <div className="upload__form-labl-one">
             <label htmlFor="title" className="upload__form-name">
@@ -61,30 +66,28 @@ function Upload() {
             />
           </div>
           <div className="upload__form-labl-one">
-           
             <label htmlFor="description" className="upload__form-name">
-              
               ADD A VIDEO DESCRIPTION
             </label>
 
             <textarea
-            type="text"
-            name="description"
+              type="text"
+              name="description"
               className="upload__form-text"
               placeholder="Add a description to your video"
             />
           </div>
-        </form>
-      </div>
-
-      <div className="upload__form-btns">
-        <button className="upload__form-publish">
-          <Link className="upload__btn-link" to="/publish">
+          <div className="upload__form-btns">
+            <button type="submit" className="upload__form-publish">
+              Publish
+              {/* <Link className="upload__btn-link" to="/publish">
             PUBLISH
-          </Link>
-        </button>
+          </Link> */}
+            </button>
 
-        <button className="upload__form-cancel">CANCEL</button>
+            <button className="upload__form-cancel">CANCEL</button>
+          </div>
+        </form>
       </div>
     </div>
   );

@@ -41,6 +41,7 @@ function Home() {
           <Comments
             comments={videoDetails?.comments && videoDetails?.comments}
             videoDetails={videoDetails && videoDetails}
+            videoId = {videoId}
           />
         </section>
         <VideoInfo
